@@ -12,23 +12,12 @@ The application can provide you with a training program and monitor its implemen
 
 ## 📸 Photo / Video
 
-https://github.com/user-attachments/assets/88184480-7ba1-4d27-afcc-5be2cc1279d7
+https://github.com/user-attachments/assets/bc2e28ca-d686-47c7-a1e2-a525c6efeb00
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/3977ac82-43cc-436a-9ac4-2dddcc08c053" width="30%">
+  <img src="https://github.com/user-attachments/assets/3802d3da-ef7e-4bc1-9856-f71bdbf6e2a1" width="30%">
+  <img src="https://github.com/user-attachments/assets/84852764-6157-4700-8569-c8f14a1229bc" width="30%">
+</p>
 
-## 🔧 Установка и запуск
-
-### 📥 Установка
-```bash
-git clone https://github.com/your-username/your-repo.git
-cd your-repo
-npm install  # или другая команда установки зависимостей
-```
-
-### ▶️ Запуск
-```bash
-npm start  # или другая команда запуска проекта
-```
-
-*(Добавьте инструкции для Docker, если используется.)*
-
-🔥 *Сделано с любовью ❤️*  
-✉ Связаться: [Ваш Email / Telegram / Twitter]  
+🔥 *Thank you for your attention ❤️*  
+✉ Contact: [Email](mailto:kobetskiy22@gmail.com) | [Telegram](https://t.me/kobetskiy) | [Instagram](https://instagram.com/kobetskiy.dev) 

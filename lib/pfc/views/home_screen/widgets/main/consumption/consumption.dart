@@ -46,7 +46,7 @@ class _ConsumptionState extends State<Consumption>
           ),
           SizedBox(height: 5.sp),
           SizedBox(
-            height: 270.sp,
+            height: 255.sp,
             child: PageView(
               onPageChanged: (value) {
                 _tabController.index = value;

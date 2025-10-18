@@ -15,41 +15,38 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: CustomColors.lightlightGrey,
-      body: SafeArea(
-        child: NestedScrollView(
-          floatHeaderSlivers: true,
-          headerSliverBuilder: (context, innerBoxIsScrolled) => [
-            AppBarWidget(
-              title: 'Б.Ж.У',
-              leading: IconButton(
-                onPressed: () async => await showModalBottomSheet(
-                  context: context,
-                  isScrollControlled: true,
-                  builder: (context) => const AddDishBottomSheet(),
-                ),
-                icon:
-                    Image.asset(AppIcons.calendar, width: 20.sp, height: 20.sp),
+      body: NestedScrollView(
+        floatHeaderSlivers: true,
+        headerSliverBuilder: (context, innerBoxIsScrolled) => [
+          AppBarWidget(
+            title: 'Б.Ж.У',
+            leading: IconButton(
+              onPressed: () async => await showModalBottomSheet(
+                context: context,
+                isScrollControlled: true,
+                builder: (context) => const AddDishBottomSheet(),
               ),
+              icon: Image.asset(AppIcons.calendar, width: 20.sp, height: 20.sp),
             ),
-          ],
-          body: SingleChildScrollView(
-            child: Column(
-              children: [
-                SizedBox(height: 10.sp),
-                const ProfileInformation(),
-                SizedBox(height: 10.sp),
-                const Consumption(),
-                SizedBox(height: 10.sp),
-                const PhysicalActivity(),
-                SizedBox(height: 10.sp),
-                const MenuAndHistory(),
-                SizedBox(height: 10.sp),
-                const NutritionistChannels(),
-                SizedBox(height: 10.sp),
-                const FitnessInstructorChannels(),
-                const CustomSearchBar(),
-              ],
-            ),
+          ),
+        ],
+        body: SingleChildScrollView(
+          child: Column(
+            children: [
+              SizedBox(height: 10.sp),
+              const ProfileInformation(),
+              SizedBox(height: 10.sp),
+              const Consumption(),
+              SizedBox(height: 10.sp),
+              const PhysicalActivity(),
+              SizedBox(height: 10.sp),
+              const MenuAndHistory(),
+              SizedBox(height: 10.sp),
+              const NutritionistChannels(),
+              SizedBox(height: 10.sp),
+              const FitnessInstructorChannels(),
+              const CustomSearchBar(),
+            ],
           ),
         ),
       ),

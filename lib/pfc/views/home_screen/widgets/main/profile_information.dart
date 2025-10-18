@@ -115,7 +115,7 @@ class _PersonalInfo extends StatelessWidget {
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text('Mya Hudson', style: theme.textTheme.titleMedium),
+            Text('Дарья Ковальчук', style: theme.textTheme.titleMedium),
             Text(
               'Цель: сбросить вес',
               style: theme.textTheme.titleMedium!

@@ -7,28 +7,30 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 class CircularProgressPainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
-    Paint backgroundPaint = Paint()
+    final Paint backgroundPaint = Paint()
       ..color = Colors.grey.shade200
       ..strokeWidth = 10.sp
       ..style = PaintingStyle.stroke;
 
-    Paint progressPaint = Paint()
+    final Paint progressPaint = Paint()
       ..color = Colors.green
       ..strokeWidth = 10.sp
       ..style = PaintingStyle.stroke
       ..strokeCap = StrokeCap.round;
 
-    double progress = 0.1.sp;
+    const double progress = 0.1;
 
-    Offset center = Offset(size.width / 2.sp - 5.sp, size.height / 2.sp);
-    double radius = min(size.width, size.height) + 10.sp;
+    final Offset center = Offset(size.width / 2, size.height / 2);
+    final double radius = min(size.width, size.height) / 2 - 10.sp;
 
+    // Фон круга
     canvas.drawCircle(center, radius, backgroundPaint);
 
-    double arcAngle = 2.sp * pi * progress;
+    // Прогресс
+    const double arcAngle = 2 * pi * progress;
     canvas.drawArc(
       Rect.fromCircle(center: center, radius: radius),
-      -pi / 2.sp,
+      -pi / 2,
       arcAngle,
       false,
       progressPaint,
@@ -36,9 +38,7 @@ class CircularProgressPainter extends CustomPainter {
   }
 
   @override
-  bool shouldRepaint(covariant CustomPainter oldDelegate) {
-    return true;
-  }
+  bool shouldRepaint(covariant CustomPainter oldDelegate) => true;
 }
 
 class LinearProgressPainter extends StatelessWidget {

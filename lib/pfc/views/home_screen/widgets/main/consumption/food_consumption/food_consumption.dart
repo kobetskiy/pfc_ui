@@ -20,7 +20,7 @@ class FoodConsumption extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const _General(),
-            SizedBox(height: 30.sp),
+            SizedBox(height: 9.sp),
             const _PFCCalculating(),
           ],
         ),
@@ -34,26 +34,26 @@ class _PFCCalculating extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
+    return const Row(
       mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
         _NutrientBar(
           label: 'Углеводы',
           value: '102/255г',
           color: CustomColors.primaryBlue,
-          progress: 0.4.sp,
+          progress: 0.4,
         ),
         _NutrientBar(
           label: 'Белки',
           value: '23/102г',
           color: CustomColors.orange,
-          progress: 0.22.sp,
+          progress: 0.22,
         ),
         _NutrientBar(
           label: 'Жиры',
           value: '50/68г',
-          color: const Color(0xFF46BCFF),
-          progress: 0.73.sp,
+          color: Color(0xFF46BCFF),
+          progress: 0.7,
         ),
       ],
     );
@@ -68,12 +68,17 @@ class _General extends StatelessWidget {
     return Row(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Padding(
-          padding: EdgeInsets.only(top: 40.sp, left: 40.sp),
-          child: CustomPaint(
-            painter: CircularProgressPainter(),
-            child: Center(
-              child: Column(
+        SizedBox(
+          width: 140.sp, // ✅ фиксированный размер области круга
+          height: 140.sp,
+          child: Stack(
+            alignment: Alignment.center,
+            children: [
+              CustomPaint(
+                size: Size(140.sp, 140.sp),
+                painter: CircularProgressPainter(),
+              ),
+              Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
@@ -91,15 +96,15 @@ class _General extends StatelessWidget {
                   ),
                 ],
               ),
-            ),
+            ],
           ),
         ),
-        SizedBox(width: 60.sp),
+        SizedBox(width: 50.sp),
         const ConsumptionInfo(
-          topTitle: 'Потребление',
-          topSubtitle: '104 ккал',
-          bottomTitle: 'Расход',
-          bottomSubtitle: '1090 ккал',
+          topTitle: 'Набрано',
+          topSubtitle: '950 ккал',
+          bottomTitle: 'Израсходованно',
+          bottomSubtitle: '240 ккал',
         ),
         const Spacer(),
         GestureDetector(
